@@ -1,5 +1,18 @@
-.HeaderPhoto {
-    width: 50px; /* Make the image small */
-    background-color: red; /* Set background color to red */
-    border-radius: 50%; /* Make border a circle */
+
+.HeaderLink {
+    display: inline-block; 
+}
+
+.HeaderPhoto {   width: 50px;
+    background-color: red; 
+    border-radius: 50%; 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+.Header{ border: 2px sold red;
+    background-color: #65B741;
+}
+.HeaderText {
+    display: inline-block; 
+    vertical-align: middle; 
 }
