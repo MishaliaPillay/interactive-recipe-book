@@ -1,14 +1,14 @@
 // SearchBar.jsx
 
 import React from 'react';
-
+import "./SearchBar.css"
 function SearchBar({ setSearchQuery }) {
     const handleSearch = (e) => {
         setSearchQuery(e.target.value.toLowerCase()); // Pass the lowercase search query to the parent component
     };
 
     return (
-        <input
+        <input className='search'
             type="text"
             placeholder="Search recipes..."
             onChange={handleSearch}

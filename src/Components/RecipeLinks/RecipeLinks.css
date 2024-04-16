@@ -32,12 +32,16 @@ ul{
     padding: 2em;
     justify-content: center;
     margin-left: 6em; margin-right: 6em;
-margin-top: 1em;
-  
+margin-top: 0.5em;
+  margin-bottom: 0.5em;
    
     background-color:#C1F2B0;
 }
 .tags{
     background-color: #FFB534;
     border: 20%;
+}
+.recipeIcons{
+    border-radius: 10px;
+width: 50px;
 }

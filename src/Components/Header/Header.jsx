@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import ChefHatImage from './ChefHat.png';
-import SearchBar from '../SearchBar';
+import SearchBar from '../SerachBar/SearchBar';
 
 function Header({ setSearchQuery }) {
   return (

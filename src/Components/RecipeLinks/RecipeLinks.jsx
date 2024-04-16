@@ -30,7 +30,7 @@ function RecipeLinks({ recipes, searchQuery }) {
             <ul>
                 {filteredRecipes.map(recipe => (
                     <li className='recipeCtn' key={recipe.id}>
-                        <button className='recipeBtn' onClick={() => toggleRecipe(recipe.id)}>{recipe.name} </button>
+                      <img src={recipe.image} alt={recipe.name} className='recipeIcons'/>  <button className='recipeBtn' onClick={() => toggleRecipe(recipe.id)}>{recipe.name} </button>
                         {openRecipeId === recipe.id && (
                             <div>
                                 <img src={recipe.image} alt={recipe.name} style={{ maxWidth: '300px' }} />
