@@ -11,7 +11,8 @@ margin: 0;
     display: inline-block; 
     vertical-align: middle; 
 }
-.Header{margin: auto; border: 2px sold red;
+.Header{height: 100px;
+    margin: auto; border: 2px sold red;
     background-color: #65B741;
 }
 .HeaderText {padding:5px ; color: #FBF6EE;margin: auto;
@@ -20,4 +21,9 @@ margin: 0;
 }
 ul{padding: 1em;
     margin: 0;
+}
+.searchbar{ 
+  
+ margin-top:-50px;
+ margin-left: 80%;
 }
