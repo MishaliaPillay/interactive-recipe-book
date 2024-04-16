@@ -12,7 +12,7 @@ function RecipeLinks() {
 
     return (
         <>
-            <h1>Recipe Links</h1>
+            <h1 className='title'>Recipes</h1>
             <ul>
                 {recipes.recipes.map(recipe => (
                     <li className='recipeCtn' key={recipe.id}>
@@ -38,7 +38,7 @@ function RecipeLinks() {
                                 <p>Difficulty: {recipe.difficulty}</p>
                                 <p>Cuisine: {recipe.cuisine}</p>
                                 <p>Calories Per Serving: {recipe.caloriesPerServing}</p>
-                                <p>Tags: {recipe.tags.join(', ')}</p>
+                                <p className='Tags'>Tags: {recipe.tags.join(', ')}</p>
                                 <p>Rating: {recipe.rating}</p>
                                 <p>Review Count: {recipe.reviewCount}</p>
                                 <p>Meal Type: {recipe.mealType.join(', ')}</p>

@@ -5,17 +5,17 @@ import ChefHatImage from './ChefHat.png'; // Import the image file
 
 function Header() {
     return (
-        < Header className='Header'>
+        <div className='Header'>
            <ul >
              <li> {/* Wrap the content in a Link component */}
                  <Link to="/" className="HeaderLink">
                         {/* Apply the class to the image */}
                         <img className="HeaderPhoto" src={ChefHatImage} alt="chef hat" />
-                        <span className="HeaderText">Cheese</span>
+                        <span className="HeaderText">Whisked Away</span>
                  </Link>
                 </li>
             </ul>
-        </Header>
+</div>
     );
 }
 

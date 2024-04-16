@@ -9,11 +9,11 @@ ul{
 }
 .recipeBtn{ 
     font-weight: bold;
-    color: #2C7865;
+   
     font-size:1.2em;
     border: none;
-    background-color:#FBF6EE ;
-    padding: 2em;
+    background-color:#C1F2B0 ;
+    padding: 1em;
      align-items: center;
      justify-content: center;
      transition-duration: 0.4s;
@@ -25,11 +25,19 @@ ul{
     text-decoration:underline;
   
 }
-.recipeCtn{
+.title{
+    margin-left: 3rem;
+}
+.recipeCtn{ border-radius: 5px;
     padding: 2em;
     justify-content: center;
-margin: 4em  4em 1em 2em;
-   color: #2C7865;
-    border: 2px solid #2C7865;
-    background-color:#FBF6EE;
+    margin-left: 6em; margin-right: 6em;
+margin-top: 1em;
+  
+   
+    background-color:#C1F2B0;
+}
+.tags{
+    background-color: #FFB534;
+    border: 20%;
 }
