@@ -1,0 +1,35 @@
+ul li{
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    display: grid;  
+}
+.recipeBtn{ 
+    font-weight: bold;
+    color: #2C7865;
+    font-size:1.2em;
+    border: none;
+    background-color:#FBF6EE ;
+    padding: 2em;
+     align-items: center;
+     justify-content: center;
+     transition-duration: 0.4s;
+     text-decoration: none;
+     display: inline-block;
+ 
+}
+.recipeBtn:hover{
+    text-decoration:underline;
+  
+}
+.recipeCtn{
+    padding: 2em;
+    justify-content: center;
+margin: 4em  4em 1em 2em;
+   color: #2C7865;
+    border: 2px solid #2C7865;
+    background-color:#FBF6EE;
+}

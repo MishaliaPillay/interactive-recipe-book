@@ -1,0 +1,5 @@
+.HeaderPhoto {
+    width: 50px; /* Make the image small */
+    background-color: red; /* Set background color to red */
+    border-radius: 50%; /* Make border a circle */
+}

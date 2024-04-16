@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import recipes from './Data'; // Import recipe data
-
+import recipes from '../Data'; // Import recipe data
+import "./RecipeLinks.css"
 function RecipeLinks() { 
 
     //Checks whether a user has opened a recipe and closes other open recipes - so that one recipe is opened at a time.
@@ -11,12 +11,12 @@ function RecipeLinks() {
     };
 
     return (
-        <div>
+        <>
             <h1>Recipe Links</h1>
             <ul>
                 {recipes.recipes.map(recipe => (
-                    <li key={recipe.id}>
-                        <button onClick={() => toggleRecipe(recipe.id)}>{recipe.name}</button>
+                    <li className='recipeCtn' key={recipe.id}>
+                        <button className='recipeBtn' onClick={() => toggleRecipe(recipe.id)}>{recipe.name} </button>
                         {openRecipeId === recipe.id && (
                             <div>
                                 <img src={recipe.image} alt={recipe.name} style={{ maxWidth: '300px' }} />
@@ -47,7 +47,7 @@ function RecipeLinks() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </>
     );
 }
 

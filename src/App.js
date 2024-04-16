@@ -1,11 +1,14 @@
 import React from 'react'
-import RecipeLinks from './Components/RecipeLinks'
- 
+import RecipeLinks from './Components/RecipeLinks/RecipeLinks'
+import Header from './Components/Header/Header'
+ import { Route, BrowserRouter, Routes } from 'react-router-dom'
 function App() {
   return (
-    <div>
-       <RecipeLinks/>
-    </div>
+    <BrowserRouter>  <Header/>
+<Routes> <Route path="/" element={ <RecipeLinks/>} />
+    
+      </Routes>
+    </BrowserRouter>
   )
 }
 
