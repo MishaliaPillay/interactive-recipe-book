@@ -18,6 +18,11 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
 
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
+        // Toggle search bar visibility
+        const searchBar = document.querySelector('.searchbar');
+        if (searchBar) {
+            searchBar.classList.toggle('showSearchBar');
+        }
     };
 
     return (
@@ -36,9 +41,9 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
                     <section className='filter'>
                         <Filter filterOptions={filterOptions} filterValue={filterValue} setFilterValue={setFilterValue} onSelectFilter={onSelectFilter} />
                     </section>
-                
+            
 
-                <section className='searchbar'>
+                <section className={`searchbar ${isMenuVisible ? 'showSearchBar' : ''}`}>
                     <SearchBar setSearchQuery={setSearchQuery} />
                 </section>
 

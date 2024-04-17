@@ -38,15 +38,14 @@
     display: none; /* Initially hidden on larger screens */
 }
 
-.filter {margin-left: 20%;
-  flex-grow: 1;
+.filter {margin-left: 40%;
+    flex-grow: 1; /* Expand to fill remaining space */
     display: flex;
     justify-content: flex-end;
 }
 
-.searchbar {margin-left: 2%;
-flex-grow: 1;
- /* Expand to fill remaining space */
+.searchbar { margin: 10%;
+    flex-grow: 1; /* Expand to fill remaining space */
     text-align: right;
 }
 

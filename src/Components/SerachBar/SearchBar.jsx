@@ -7,13 +7,13 @@ function SearchBar({ setSearchQuery }) {
         setSearchQuery(e.target.value.toLowerCase()); // Pass the lowercase search query to the parent component
     };
 
-    return (  <div className='searchCtn'> <MagnifyingGlass size={20} />
+    return (  <section className='searchCtn'> <MagnifyingGlass margin={20} weight="bold"  color="#FFB534" size={20} />
         <input   
         className='search'
             type="text"
             placeholder="Search recipes..."
             onChange={handleSearch}
-        /></div>
+        /></section>
     );
 }
 
