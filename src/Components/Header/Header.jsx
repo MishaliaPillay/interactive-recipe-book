@@ -26,12 +26,15 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
         setIsMenuVisible(!isMenuVisible);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Toggle search bar visibility
         const searchBar = document.querySelector('.searchbar');
         if (searchBar) {
             searchBar.classList.toggle('showSearchBar');
         }
         console.log(recipesData);
+=======
+>>>>>>> parent of 187c1f8 (17/04)
 =======
 >>>>>>> parent of 187c1f8 (17/04)
 =======
@@ -56,7 +59,11 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
                     </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 )}
+=======
+                
+>>>>>>> parent of 187c1f8 (17/04)
 =======
                 
 >>>>>>> parent of 187c1f8 (17/04)
