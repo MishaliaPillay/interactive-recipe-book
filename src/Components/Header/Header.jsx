@@ -24,12 +24,15 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
 
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
+<<<<<<< HEAD
         // Toggle search bar visibility
         const searchBar = document.querySelector('.searchbar');
         if (searchBar) {
             searchBar.classList.toggle('showSearchBar');
         }
         console.log(recipesData);
+=======
+>>>>>>> parent of 187c1f8 (17/04)
     };
 
     return (
@@ -48,9 +51,13 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
                     <section className='filter'>
                         <Filter filterOptions={filterOptions} selectedFilter={filterValue} onSelectFilter={onSelectFilter}  recipesData={recipesData}/>
                     </section>
+<<<<<<< HEAD
                 )}
+=======
+                
+>>>>>>> parent of 187c1f8 (17/04)
 
-                <section className={`searchbar ${isMenuVisible ? 'showSearchBar' : ''}`}>
+                <section className='searchbar'>
                     <SearchBar setSearchQuery={setSearchQuery} />
                 </section>
 
