@@ -68,7 +68,7 @@ const recipes = {
             "tags": [
                 "Vegetarian",
                 "Stir-fry",
-                "Asian"
+                "Asian","Favorites"
             ],
             "userId": 58,
             "image": "https://cdn.dummyjson.com/recipe-images/2.webp",

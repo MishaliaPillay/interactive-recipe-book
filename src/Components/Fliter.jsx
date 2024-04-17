@@ -1,8 +1,11 @@
 // Filter.jsx
 
 import React from 'react';
+import { useFavoriteRecipes } from './FavoriteRecipesContext'; // Import FavoriteRecipesContext
 
 function Filter({ filterOptions, selectedFilter, onSelectFilter }) {
+    const { isFavorite } = useFavoriteRecipes(); // Access isFavorite function from context
+
     return (
         <select value={selectedFilter} onChange={(e) => onSelectFilter(e.target.value)}>
             <option value="all">All</option>
@@ -11,6 +14,7 @@ function Filter({ filterOptions, selectedFilter, onSelectFilter }) {
                     {option}
                 </option>
             ))}
+            <option value="Favorites">Favorites</option> {/* Add Favorites option */}
         </select>
     );
 }

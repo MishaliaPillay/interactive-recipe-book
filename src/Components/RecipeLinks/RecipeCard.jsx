@@ -1,12 +1,33 @@
-// RecipeCard.jsx
-
 import React from 'react';
+import { useFavoriteRecipes } from '../FavoriteRecipesContext';
+import { Heart } from '@phosphor-icons/react';
+function RecipeCard({ recipe, isOpen, toggleRecipe,updateRecipe }) {
+    const { toggleFavorite, isFavorite } = useFavoriteRecipes();
+    const handleFavoriteClick = () => {
+        // Toggle favorite status and update tags
+        toggleFavorite(recipe.id);
+        updateRecipe(prevRecipes => {
+            const updatedRecipes = prevRecipes.map(prevRecipe => {
+                if (prevRecipe.id === recipe.id) {
+                    return { ...prevRecipe, isFavorite: !prevRecipe.isFavorite };
+                }
+                return prevRecipe;
+            });
+            return updatedRecipes;
+        });
+    };
 
-function RecipeCard({ recipe, isOpen, toggleRecipe }) {
     return (
         <li className='recipeCtn' key={recipe.id}>
             <img src={recipe.image} alt={recipe.name} className='recipeIcons' />
             <button className='recipeBtn' onClick={() => toggleRecipe(recipe.id)}>{recipe.name}</button>
+            <button className='favoriteBtn' onClick={handleFavoriteClick}>
+                {isFavorite(recipe.id) ? (
+                    <Heart size={32} color="#FFB534" weight="fill" />
+                ) : (
+                    <Heart size={32} color="#FFB534" weight="regular" />
+                )}
+            </button>
             {isOpen && (
                 <div>
                     <img src={recipe.image} alt={recipe.name} style={{ maxWidth: '300px' }} />
@@ -28,7 +49,7 @@ function RecipeCard({ recipe, isOpen, toggleRecipe }) {
                     <p>Difficulty: {recipe.difficulty}</p>
                     <p>Cuisine: {recipe.cuisine}</p>
                     <p>Calories Per Serving: {recipe.caloriesPerServing}</p>
-                    <p className='tags'>Tags: {recipe.tags.join(', ')}</p>
+                    <p className='tags'>Tags: {isFavorite(recipe.id) ? [...recipe.tags, 'Favorites'].join(', ') : recipe.tags.join(', ')}</p>
                     <p>Rating: {recipe.rating}</p>
                     <p>Review Count: {recipe.reviewCount}</p>
                     <p>Meal Type: {recipe.mealType.join(', ')}</p>
