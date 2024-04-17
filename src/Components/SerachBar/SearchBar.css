@@ -1,3 +1,11 @@
-.search{ border-radius: 10px;
+.search{ 
+    border: none;
+    border-radius: 10px;
     padding: 10px;
+}
+.searchCtn{
+    
+    width: 180px;
+    padding:10px   10px 10px 20px;
+    background-color: blue;
 }

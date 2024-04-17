@@ -25,7 +25,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "Italian",
             "caloriesPerServing": 300,
-            "tags": [
+            "tags": ["Vegetarian",
                 "Pizza",
                 "Italian"
             ],
@@ -108,7 +108,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "American",
             "caloriesPerServing": 150,
-            "tags": [
+            "tags": ["Vegetarian",
                 "Cookies",
                 "Dessert",
                 "Baking"
@@ -265,7 +265,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "Italian",
             "caloriesPerServing": 120,
-            "tags": [
+            "tags": ["Breakfast",
                 "Bruschetta",
                 "Italian"
             ],
@@ -342,7 +342,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "Italian",
             "caloriesPerServing": 200,
-            "tags": [
+            "tags": ["Vegan",
                 "Salad",
                 "Caprese"
             ],
@@ -611,7 +611,7 @@ const recipes = {
             "difficulty": "Medium",
             "cuisine": "Pakistani",
             "caloriesPerServing": 280,
-            "tags": [
+            "tags": ["Vegetarian",
                 "Saag",
                 "Roti",
                 "Main course",
@@ -795,7 +795,7 @@ const recipes = {
             "difficulty": "Medium",
             "cuisine": "Greek",
             "caloriesPerServing": 420,
-            "tags": [
+            "tags": ["Keto",
                 "Moussaka",
                 "Greek"
             ],
@@ -914,7 +914,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "Indian",
             "caloriesPerServing": 180,
-            "tags": [
+            "tags": ["Vegetarian",
                 "Lassi",
                 "Mango",
                 "Indian",
@@ -1031,7 +1031,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "Smoothie",
             "caloriesPerServing": 220,
-            "tags": [
+            "tags": ["Vegetarian",
                 "Smoothie",
                 "Blueberry",
                 "Banana"
@@ -1151,7 +1151,7 @@ const recipes = {
             "difficulty": "Medium",
             "cuisine": "Indian",
             "caloriesPerServing": 320,
-            "tags": [
+            "tags": ["Vegan",
                 "Dosa",
                 "Indian",
                 "Asian"
@@ -1190,7 +1190,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "Lebanese",
             "caloriesPerServing": 400,
-            "tags": [
+            "tags": ["Vegan",
                 "Falafel",
                 "Lebanese",
                 "Wrap"
@@ -1225,7 +1225,7 @@ const recipes = {
             "difficulty": "Easy",
             "cuisine": "Brazilian",
             "caloriesPerServing": 150,
-            "tags": [
+            "tags": ["Vegan",
                 "Caipirinha",
                 "Brazilian",
                 "Cocktail"

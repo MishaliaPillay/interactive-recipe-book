@@ -7,12 +7,15 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
-
+  const [filterValue, setFilterValue] = useState('all');
+  const onSelectFilter = (value) => {
+    setFilterValue(value); // Update the filter value when an option is selected
+  };
   return (
     <BrowserRouter>
-      <Header setSearchQuery={setSearchQuery} />
+      <Header setSearchQuery={setSearchQuery} filterValue={filterValue} setFilterValue={setFilterValue} onSelectFilter={onSelectFilter} />
       <Routes>
-        <Route path="/" element={<RecipeLinks recipes={recipesData} searchQuery={searchQuery} />} />
+        <Route path="/" element={<RecipeLinks recipes={recipesData} searchQuery={searchQuery} filterValue={filterValue} />} />
       </Routes>
     </BrowserRouter>
   );

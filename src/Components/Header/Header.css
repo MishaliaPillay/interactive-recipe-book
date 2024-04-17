@@ -1,29 +1,84 @@
-body{
-margin: 0;
-}
-.HeaderLink { margin: auto;
-    display: inline-block; 
+/* Header.css */
+.Header {
+    height: 100px;
+    background-color: #65B741;
+    transition: transform 0.3s ease;
 }
 
-.HeaderPhoto { margin: auto;  width: 50px;
-    background-color: #FBF6EE; 
-    border-radius: 50%; border: 4px solid #FFB534;
-    display: inline-block; 
-    vertical-align: middle; 
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
 }
-.Header{height: 100px;
-    margin: auto; border: 2px sold red;
-    background-color: #65B741;
+
+.HeaderLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 }
-.HeaderText {padding:5px ; color: #FBF6EE;margin: auto;
-    display: inline-block; 
-    vertical-align: middle;  font-size: 1.3em;
+
+.HeaderPhoto {
+    width: 50px;
+    background-color: #FBF6EE;
+    border-radius: 50%;
+    border: 4px solid #FFB534;
+    margin-right: 10px;
 }
-ul{padding: 1em;
-    margin: 0;
+
+.HeaderText {
+    font-weight: bolder;
+    font-size: 1.3em;
 }
-.searchbar{ 
-  
- margin-top:-50px;
- margin-left: 60%;
+
+.menuToggle {
+    cursor: pointer;
+    display: none; /* Initially hidden on larger screens */
+}
+
+.filter {margin-left: 20%;
+  flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchbar {margin-left: 2%;
+flex-grow: 1;
+ /* Expand to fill remaining space */
+    text-align: right;
+}
+
+.closeButton {
+    cursor: pointer;
+    display: none; /* Initially hidden on larger screens */
+}
+
+.hide {
+    display: none;
+}
+
+/* Media Query for screens with a max-width of 650px */
+@media (max-width: 650px) {
+    .Header {
+        height: auto;
+    }
+
+    .menuToggle {
+        display: flex; /* Show the burger button */
+    }
+
+    .filter,
+    .searchbar {
+        display: none; /* Hide the filter options and search bar */
+    }
+
+    .menuVisible {
+        transform: translateY(0); /* Slide the header down when menu is visible */
+    }
+
+    .closeButton {
+        display: flex; /* Show the close button */
+    }
 }
