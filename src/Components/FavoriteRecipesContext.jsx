@@ -1,30 +1,26 @@
 // FavoriteRecipesContext.js
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-const FavoriteRecipesContext = createContext();
+export const FavoriteRecipesContext = createContext();
 
-export const useFavoriteRecipes = () => {
-    return useContext(FavoriteRecipesContext);
-};
+export const useFavoriteRecipes = () => useContext(FavoriteRecipesContext);
 
 export const FavoriteRecipesProvider = ({ children }) => {
-    const [favoriteRecipes, setFavoriteRecipes] = useState([]);
+  const [favoriteRecipeIds, setFavoriteRecipeIds] = useState([]);
 
-    const toggleFavorite = (recipeId) => {
-        if (favoriteRecipes.includes(recipeId)) {
-            setFavoriteRecipes(favoriteRecipes.filter(id => id !== recipeId));
-        } else {
-            setFavoriteRecipes([...favoriteRecipes, recipeId]);
-        }
-    };
-
-    const isFavorite = (recipeId) => {
-        return favoriteRecipes.includes(recipeId);
-    };
-
-    return (
-        <FavoriteRecipesContext.Provider value={{ favoriteRecipes, toggleFavorite, isFavorite }}>
-            {children}
-        </FavoriteRecipesContext.Provider>
+  const toggleFavorite = (recipeId) => {
+    setFavoriteRecipeIds((prevIds) =>
+      prevIds.includes(recipeId)
+        ? prevIds.filter((id) => id !== recipeId)
+        : [...prevIds, recipeId]
     );
+  };
+
+  const isFavorite = (recipeId) => favoriteRecipeIds.includes(recipeId);
+
+  return (
+    <FavoriteRecipesContext.Provider value={{ toggleFavorite, isFavorite }}>
+      {children}
+    </FavoriteRecipesContext.Provider>
+  );
 };

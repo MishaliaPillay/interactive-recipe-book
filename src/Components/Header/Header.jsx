@@ -1,20 +1,26 @@
-// Header.jsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import ChefHatImage from './ChefHat.png';
-import SearchBar from '../SerachBar/SearchBar';
-import Filter from '../Fliter';
+import SearchBar from '../SerachBar/SearchBar'; // Corrected import path
+import Filter from '../Fliter'; // Corrected import path
 import { List, X } from '@phosphor-icons/react'; // Import Phosphor icons
 
+import recipesData from "../Data";
 function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter }) {
-    const filterOptions = ["Favorites", 'Breakfast', "Dinner", "Lunch", 'Dessert', 'Keto', 'Vegan', 'Vegetarian'];
+    const filterOptions = ['Breakfast', 'Dinner', 'Lunch', 'Dessert', 'Keto', 'Vegan', 'Vegetarian'];
     const [isFilterOpen, setIsFilterOpen] = useState(false); // State to toggle filter options
     const [isMenuVisible, setIsMenuVisible] = useState(false); // State to toggle menu visibility
+    const [isLoading, setIsLoading] = useState(true); // State to track loading state
 
-    const toggleFilter = () => {
-        setIsFilterOpen(!isFilterOpen);
-    };
+    useEffect(() => {
+        // Simulate asynchronous data loading
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000); // Adjust the timeout as per your actual data loading mechanism
+    }, []);
+
+ 
 
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
@@ -23,6 +29,7 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
         if (searchBar) {
             searchBar.classList.toggle('showSearchBar');
         }
+        console.log(recipesData);
     };
 
     return (
@@ -37,11 +44,11 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
                     <List size={32} />
                 </section>
 
-          
+                {!isLoading && (
                     <section className='filter'>
-                        <Filter filterOptions={filterOptions} filterValue={filterValue} setFilterValue={setFilterValue} onSelectFilter={onSelectFilter} />
+                        <Filter filterOptions={filterOptions} selectedFilter={filterValue} onSelectFilter={onSelectFilter}  recipesData={recipesData}/>
                     </section>
-            
+                )}
 
                 <section className={`searchbar ${isMenuVisible ? 'showSearchBar' : ''}`}>
                     <SearchBar setSearchQuery={setSearchQuery} />
@@ -54,5 +61,6 @@ function Header({ setSearchQuery, filterValue, setFilterValue, onSelectFilter })
         </header>
     );
 }
+
 
 export default Header;

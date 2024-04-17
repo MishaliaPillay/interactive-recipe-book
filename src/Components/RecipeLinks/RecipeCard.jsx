@@ -23,9 +23,9 @@ function RecipeCard({ recipe, isOpen, toggleRecipe,updateRecipe }) {
             <button className='recipeBtn' onClick={() => toggleRecipe(recipe.id)}>{recipe.name}</button>
             <button className='favoriteBtn' onClick={handleFavoriteClick}>
                 {isFavorite(recipe.id) ? (
-                    <Heart size={32} color="#FFB534" weight="fill" />
+                    <Heart size={32} color="#FBF6EE" weight="fill" />
                 ) : (
-                    <Heart size={32} color="#FFB534" weight="regular" />
+                    <Heart size={32} color="#FBF6EE" weight="regular" />
                 )}
             </button>
             {isOpen && (
